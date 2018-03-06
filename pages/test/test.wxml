@@ -1,0 +1,26 @@
+<view class="usermotto">
+    <text class="user-motto">测试页</text>
+</view>
+<view>
+    <text>{{name}}</text>
+</view>
+<view>
+    <text>密码是:{{password}}</text>
+    <button bindtap="toIndex">跳转到首页</button>
+    <button bindtap="sHello">测试显示隐藏</button>
+</view>
+<view style="margin-top: 20px;">属性显示</view>
+<view id="{{name}}">测试内容</view>
+<view style="margin-top: 20px;">条件渲染</view>
+<view wx:if="{{abc}}">测试内容</view>
+<view style="margin-top: 20px;">条件for输出</view>
+<view style="float: left" wx:for="{{arr}}">{{item}}</view>
+<view style="float: left" wx:for="{{list}}">名字:{{item.name}}年龄:{{item.age}}</view>\
+<template name="obj">
+  <view>{{a}}</view>
+  <view>{{b}}</view>
+  <view>{{name}}</view>
+</template>
+<template is="obj" data="{{a:1,b:2}}"></template>
+<view>测试事件方式</view>
+<view bindtouchstart="testTap">测试事件方式</view>
